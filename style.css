@@ -1,0 +1,121 @@
+:root {
+  --width-ball: 250px;
+  --height-ball: 250px;
+  --width-cards: 296px;
+  --height-cards: 225px;
+  --width-card: calc(calc(var(--width-cards) / 5) - 6px);
+  --height-card: calc(calc(var(--height-cards) / 4) - 6px);
+  --background-color1: #2455c0;
+  --background-color2: #0b142c;
+  --color-optional1: #9e1c23;
+  --color-optional2: #54090d;
+  --color-optional3: #eeeeee;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("./public/fonts/Roboto/Roboto-Regular.ttf") format("truetype") url("./public/fonts/Roboto/Roboto-Bold.ttf") format("truetype")
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--color-optional3);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, var(--background-color1), var(--background-color2));
+  font-family: "Roboto";
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0;
+  gap: 0px 3em;
+}
+
+.board__player {
+  width: var(--width-cards);
+  height: var(--height-cards);
+  background-color: var(--color-optional1);
+  box-shadow: 1px 1px 10px var(--color-optional2);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1px 4px;
+}
+
+.board__item {
+  min-width: var(--width-card);
+  height: var(--height-card);
+  background-color: var(--color-optional3);
+  color: var(--background-color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.board__item--desactive {
+  background-color: transparent;
+}
+
+.board__title {
+  width: 100%;
+  text-align: center;
+  color: var(--color-optional3);
+  background-color: transparent;
+  text-transform: uppercase;
+
+}
+
+.board_ball {
+  width: var(--width-ball);
+  height: var(--height-ball);
+  border-radius: 50%;
+  border: 2px solid var(--background-color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(var(--color-optional3), var(--background-color2));
+}
+
+.results {
+  width: calc(calc(var(--width-card) * 18) + 2em);
+  height: calc(var(--height-card) * 3);
+  margin: auto;
+  border: 1px solid var(--color-optional3);
+  padding: .3em;
+  gap: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#show-ball {
+  box-sizing: content-box;
+  border: 5px solid gray;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}

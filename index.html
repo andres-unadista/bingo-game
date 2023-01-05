@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main id="app">
+        <h1 class="title">¡Bingo!</h1>
+        <section class="board">
+          <article class="board__player" id="player1">
+            <h2 class="board__item board__title">Player</h2>
+          </article>
+          <article class="board_ball">
+            <div class="board__item" id="show-ball">Iniciar</div>
+          </article>
+          <article class="board__player" id="player2">
+            <h2 class="board__item board__title">CPU</h2>
+          </article>
+        </section>
+        <article class="results" id="results"></article>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
